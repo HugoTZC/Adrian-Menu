@@ -39,7 +39,7 @@ export function TopNavBar({
         </h1>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8">
+        {/* <nav className="hidden md:flex gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -50,7 +50,7 @@ export function TopNavBar({
               {link.label}
             </a>
           ))}
-        </nav>
+        </nav> */}
 
         {/* Right Side Actions */}
         <div className="flex items-center gap-4">

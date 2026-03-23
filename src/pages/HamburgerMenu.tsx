@@ -391,7 +391,7 @@ export const HamburgerMenu: React.FC = () => {
       <WhatsAppFAB />
 
       {/* Bottom Navigation Bar (Mobile) */}
-      <BottomNavBar />
+      {/* <BottomNavBar /> */}
     </div>
   );
 };

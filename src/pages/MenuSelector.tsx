@@ -43,11 +43,11 @@ export function MenuSelector() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Menudo Card - Morning */}
             <MenuCard
-              image="/images/menu.jpeg"
+              image="/images/menudo.jpeg"
               badge="Mañanas"
               title="Menudo Casero"
               subtitle="Tradicional receta casera con los mejores ingredientes"
-              linkText="Explorar Menú de Mañana"
+              linkText="Para tus Mañanas"
               href="/menudo"
               variant="primary"
               offset={false}
@@ -59,7 +59,7 @@ export function MenuSelector() {
               badge="Tardes"
               title="Hamburguesas a la Parrilla"
               subtitle="Jugosas burgers con los mejores cortes de carne"
-              linkText="Explorar Menú de Tarde"
+              linkText="Para el hambre por las Tardes"
               href="/hamburguesas"
               variant="secondary"
               offset={true}
@@ -78,7 +78,7 @@ export function MenuSelector() {
             VAMM
           </div>
           <div className="flex gap-8 text-xs font-bold tracking-widest uppercase text-on-surface-variant">
-            <a className="hover:text-primary transition-colors" href="#">
+            {/* <a className="hover:text-primary transition-colors" href="#">
               Aviso de Privacidad
             </a>
             <a className="hover:text-primary transition-colors" href="#">
@@ -86,7 +86,7 @@ export function MenuSelector() {
             </a>
             <a className="hover:text-primary transition-colors" href="#">
               Ubicación
-            </a>
+            </a> */}
           </div>
           <div className="text-xs text-on-surface-variant font-medium">
             © 2024 VAMM - Maestros del Fuego.

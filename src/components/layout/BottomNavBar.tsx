@@ -8,10 +8,10 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { icon: Home, label: 'Home', href: '#inicio' },
-  { icon: Utensils, label: 'Menu', href: '#menu' },
-  { icon: Receipt, label: 'Orders', href: '#pedidos' },
-  { icon: MessageCircle, label: 'Contact', href: '#contacto' },
+//   { icon: Home, label: 'Home', href: '#inicio' },
+//   { icon: Utensils, label: 'Menu', href: '#menu' },
+//   { icon: Receipt, label: 'Orders', href: '#pedidos' },
+//   { icon: MessageCircle, label: 'Contact', href: '#contacto' },
 ];
 
 interface BottomNavBarProps {

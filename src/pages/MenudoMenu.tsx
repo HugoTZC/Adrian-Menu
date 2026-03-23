@@ -242,7 +242,7 @@ export const MenudoMenu: React.FC = () => {
       <WhatsAppFAB />
 
       {/* Bottom Navigation Bar (Mobile) */}
-      <BottomNavBar />
+      {/* <BottomNavBar /> */}
     </div>
   );
 };

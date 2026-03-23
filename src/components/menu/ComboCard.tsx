@@ -84,7 +84,7 @@ export const ComboCard: React.FC<ComboCardProps> = ({
     >
       {/* Badge (if any) */}
       {hasBadge && (
-        <div className="absolute top-3 left-3 z-10">
+        <div className="absolute top-3 right-3 z-10">
           <span
             className={`
               inline-block
