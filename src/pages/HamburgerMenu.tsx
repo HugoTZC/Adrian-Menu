@@ -5,6 +5,7 @@ import { ComboCard } from '../components/menu/ComboCard';
 import { CTACard } from '../components/menu/CTACard';
 import { SidebarItem } from '../components/menu/SidebarItem';
 import { GlassPanel } from '../components/common/GlassPanel';
+import { DEFAULT_MESSAGES, generateWhatsAppLink, DEFAULT_PHONE_NUMBER } from '@/utils/whatsapp';
 
 // Menu data types
 interface MenuCombo {
@@ -371,7 +372,7 @@ export const HamburgerMenu: React.FC = () => {
                 title="¿HAMBRE?"
                 description="Pide ahora y recibe el sabor de la parrilla en tu puerta."
                 buttonText="Ordenar Ahora"
-                buttonLink="https://wa.me/yournumber"
+                buttonLink={generateWhatsAppLink(DEFAULT_PHONE_NUMBER, DEFAULT_MESSAGES.hamburgers)}
                 icon="schedule"
                 variant="featured"
               />
@@ -387,8 +388,8 @@ export const HamburgerMenu: React.FC = () => {
         </div>
       </main>
 
-      {/* WhatsApp Floating Action Button */}
-      <WhatsAppFAB />
+      {/* WhatsApp Floating Action Button - Hamburgers page */}
+      <WhatsAppFAB message={DEFAULT_MESSAGES.hamburgers} />
 
       {/* Bottom Navigation Bar (Mobile) */}
       {/* <BottomNavBar /> */}

@@ -1,5 +1,6 @@
 import { TopNavBar, WhatsAppFAB } from '@/components/layout';
 import { MenuCard } from '@/components/menu';
+import { DEFAULT_MESSAGES } from '@/utils/whatsapp';
 
 /**
  * MenuSelector - Landing page for VAMM menu selection
@@ -68,8 +69,8 @@ export function MenuSelector() {
         </div>
       </main>
       
-      {/* WhatsApp FAB */}
-      <WhatsAppFAB />
+      {/* WhatsApp FAB - Menu Selector page */}
+      <WhatsAppFAB message={DEFAULT_MESSAGES.menuSelector} />
       
       {/* Editorial Footer Minimal */}
       <footer className="bg-surface-container-lowest py-12 px-6">

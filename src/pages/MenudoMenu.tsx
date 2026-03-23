@@ -4,6 +4,7 @@ import { HeroSection } from '../components/common';
 import { CTACard } from '../components/menu/CTACard';
 import { QuoteSection } from '../components/menu/QuoteSection';
 import { GlassPanel } from '../components/common/GlassPanel';
+import { DEFAULT_MESSAGES, generateWhatsAppLink, DEFAULT_PHONE_NUMBER } from '@/utils/whatsapp';
 
 // Menu data types
 interface MenudoItem {
@@ -174,7 +175,7 @@ export const MenudoMenu: React.FC = () => {
                   title="¿LISTO PARA DISFRUTAR?"
                   description="El mejor menudo de la región te espera. Ordena ahora y disfruta."
                   buttonText="Ordenar Ahora"
-                  buttonLink="https://wa.me/526565275439"
+                  buttonLink={generateWhatsAppLink(DEFAULT_PHONE_NUMBER, DEFAULT_MESSAGES.menudo)}
                   icon="soup_kitchen"
                   variant="featured"
                 />
@@ -238,8 +239,8 @@ export const MenudoMenu: React.FC = () => {
         </div>
       </main>
 
-      {/* WhatsApp Floating Action Button */}
-      <WhatsAppFAB />
+      {/* WhatsApp Floating Action Button - Menudo page */}
+      <WhatsAppFAB message={DEFAULT_MESSAGES.menudo} />
 
       {/* Bottom Navigation Bar (Mobile) */}
       {/* <BottomNavBar /> */}
