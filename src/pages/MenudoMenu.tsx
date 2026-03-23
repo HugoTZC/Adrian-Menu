@@ -174,7 +174,7 @@ export const MenudoMenu: React.FC = () => {
                   title="¿LISTO PARA DISFRUTAR?"
                   description="El mejor menudo de la región te espera. Ordena ahora y disfruta."
                   buttonText="Ordenar Ahora"
-                  buttonLink="https://wa.me/6565275439"
+                  buttonLink="https://wa.me/526565275439"
                   icon="soup_kitchen"
                   variant="featured"
                 />
