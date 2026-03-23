@@ -1,0 +1,244 @@
+@import "tailwindcss";
+
+/* Custom theme configuration using CSS variables */
+@theme {
+  /* Foundation colors */
+  --color-background: #0e0e0e;
+  --color-surface: #0e0e0e;
+  --color-surface-dim: #0e0e0e;
+  --color-surface-container: #1a1a1a;
+  --color-surface-container-low: #131313;
+  --color-surface-container-high: #20201f;
+  --color-surface-container-highest: #262626;
+  --color-surface-bright: #2c2c2c;
+  --color-surface-variant: #262626;
+  
+  /* Primary - The Glow */
+  --color-primary: #ffd16c;
+  --color-primary-fixed: #fdc003;
+  --color-primary-container: #fdc003;
+  --color-primary-dim: #ecb200;
+  --color-on-primary: #604700;
+  --color-on-primary-fixed: #3d2b00;
+  
+  /* Secondary - The Ember */
+  --color-secondary: #ff743b;
+  --color-secondary-container: #a83900;
+  --color-secondary-dim: #ff743b;
+  --color-on-secondary: #3f1000;
+  
+  /* Tertiary */
+  --color-tertiary: #ffac54;
+  --color-tertiary-container: #ff9800;
+  
+  /* Text */
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #adaaaa;
+  --color-on-background: #ffffff;
+  
+  /* Outline */
+  --color-outline: #767575;
+  --color-outline-variant: #484847;
+  
+  /* Error */
+  --color-error: #ff7351;
+  --color-error-container: #b92902;
+  
+  /* Custom theme colors */
+  --color-charcoal: #1A1A1A;
+  --color-ember: #FF6B35;
+  --color-ash: #2D2D2D;
+  --color-smoke: #3A3A3A;
+  --color-cream: #FFF8F0;
+  --color-gold: #FFD700;
+  
+  /* Font families */
+  --font-headline: 'Epilogue', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-label: 'Work Sans', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Custom animations */
+  --animate-ember-glow: ember-glow 2s ease-in-out infinite alternate;
+  --animate-smoke-drift: smoke-drift 8s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.5s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes ember-glow {
+  0% { 
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3), 0 0 40px rgba(255, 107, 53, 0.1);
+  }
+  100% { 
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.5), 0 0 60px rgba(255, 107, 53, 0.2);
+  }
+}
+
+@keyframes smoke-drift {
+  0%, 100% { 
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% { 
+    transform: translateY(-20px) translateX(10px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fade-in {
+  0% { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
+/* Custom utility classes */
+/* Smoke/Steam Overlays */
+.smoke-overlay {
+  background: linear-gradient(to bottom, transparent, #0e0e0e 95%),
+              radial-gradient(circle at 50% 50%, rgba(255, 116, 59, 0.05), transparent 70%);
+}
+
+.steam-effect {
+  mask-image: linear-gradient(to top, black 20%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 20%, transparent 100%);
+}
+
+/* Ember Gradient - fire-themed gradient */
+.ember-gradient {
+  background: linear-gradient(135deg, #ffd16c 0%, #ff743b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Text Effects */
+.text-gradient-ember {
+  background: linear-gradient(to right, #ffd16c, #ff743b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-glow {
+  text-shadow: 0 0 15px rgba(253, 192, 3, 0.4);
+}
+
+/* Text Shadow Ember */
+.text-shadow-ember {
+  text-shadow: 0 0 20px rgba(255, 107, 53, 0.5),
+               0 0 40px rgba(255, 107, 53, 0.3),
+               0 0 60px rgba(255, 107, 53, 0.1);
+}
+
+/* Glass Panel - glassmorphism effect */
+.glass-panel {
+  background: rgba(38, 38, 38, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(72, 72, 71, 0.15);
+}
+
+.glass-panel-strong {
+  background: rgba(38, 38, 38, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(72, 72, 71, 0.2);
+}
+
+/* Material Icons */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Scrollbar styling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for dark theme */
+.scrollbar-dark::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #484847;
+  border-radius: 4px;
+}
+
+.scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background: #767575;
+}
+
+/* Button base styles */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dim);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-on-secondary);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dim);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--color-surface-container);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.card-elevated {
+  background-color: var(--color-surface-container-high);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
